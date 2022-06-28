@@ -1,4 +1,5 @@
-import 'package:cabinet_assistant/register/phonen_number_screen.dart';
+import 'package:cabinet_assistant/register/phone_number_screen.dart';
+import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,11 +20,17 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'Flutter Demo',
             theme: ThemeData(
-              primarySwatch: Colors.blue,
+              primaryColor: Colors.black,
+              scaffoldBackgroundColor: Colors.white,
+              secondaryHeaderColor: Colors.black,
+              visualDensity: VisualDensity.adaptivePlatformDensity,
               fontFamily: 'Proxima Nova',
-              textTheme:   ThemeText.getTextTheme(),
+              textTheme: ThemeText.getTextTheme(),
+
+              appBarTheme: const AppBarTheme(elevation: 0),
             ),
             home: const PhoneNumberScreen(),
+            onGenerateRoute: Routing.onGenerateRoute,
           );
       },
     );

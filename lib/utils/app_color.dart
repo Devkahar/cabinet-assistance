@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColor{
   const AppColor._();
   static const  Color black = Color.fromRGBO(38, 42, 47, 1);
@@ -8,4 +10,6 @@ class AppColor{
   static const Color lightGray = Color.fromRGBO(242, 242, 243, 1);
   static const Color blue = Color.fromRGBO(0, 93, 214, 1);
   static const Color darkBlue = Color.fromRGBO(0, 51, 117, 1);
+  static const Color transparent = Colors.transparent;
+
 }

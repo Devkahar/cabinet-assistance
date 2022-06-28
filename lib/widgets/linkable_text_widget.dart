@@ -5,7 +5,7 @@ import 'package:cabinet_assistant/utils/app_color.dart';
 
 class LinkableText extends StatelessWidget {
   final String text;
-  final Function onPressed;
+  final VoidCallback onPressed;
 
   const LinkableText({
     Key? key,
@@ -16,7 +16,7 @@ class LinkableText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => onPressed(),
+      onTap: onPressed,
       child: Container(
         decoration: BoxDecoration(
           border: Border(
