@@ -1,0 +1,3 @@
+enum FormAction{
+  signin,signup
+}

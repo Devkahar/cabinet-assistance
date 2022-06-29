@@ -1,7 +1,9 @@
-import 'package:cabinet_assistant/register/bottom_display_widget.dart';
-import 'package:cabinet_assistant/register/padding_wrapper.dart';
+import 'package:cabinet_assistant/register/widget/app_logo.dart';
+import 'package:cabinet_assistant/register/widget/signup_signin_suggestion.dart';
+import 'package:cabinet_assistant/register/widget/padding_wrapper.dart';
 import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/app_color.dart';
+import 'package:cabinet_assistant/utils/common_enum.dart';
 import 'package:cabinet_assistant/utils/text_theme.dart';
 import 'package:cabinet_assistant/widgets/button_widget.dart';
 import 'package:cabinet_assistant/widgets/linkable_text_widget.dart';
@@ -78,23 +80,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Center(
-                      child: SizedBox(
-                        width: 195.w,
-                        child: Column(
-                          children: [
-                            Text(
-                              'Welcome To',
-                              style: Theme.of(context).textTheme.subtitle2,
-                            ),
-                            SvgPicture.asset(
-                              'assets/images/logo.svg',
-                              fit: BoxFit.contain,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    const AppLogo(welcomeTextRequired: true,),
                     Container(
                       margin: EdgeInsets.only(top: 50.h),
                     ),
@@ -178,7 +164,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                       ),
                   ],
                 ),
-                BottomDisplay(submitHandler: isFormSubmitable?mobileNumberSubmitHandler:null,)
+                SignupSigninSuggestion(buttonText: 'Next',submitHandler: isFormSubmitable?mobileNumberSubmitHandler:null,formAction: FormAction.signin,)
               ],
             ),
           ),

@@ -1,16 +1,21 @@
+import 'package:cabinet_assistant/utils/common_enum.dart';
 import 'package:cabinet_assistant/widgets/button_widget.dart';
 import 'package:cabinet_assistant/widgets/linkable_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class BottomDisplay extends StatelessWidget {
+class SignupSigninSuggestion extends StatelessWidget {
+  final String buttonText;
   final Function? submitHandler;
-
-  const BottomDisplay({Key? key, required this.submitHandler})
+  final bool forgotPasswordRequired;
+  final FormAction formAction;
+  const SignupSigninSuggestion({Key? key, required this.submitHandler, required this.buttonText,this.forgotPasswordRequired=false, required this.formAction})
       : super(key: key);
 
-  @override
-  void redirectSignInHandler() {
+  void redirectSignInScreen() {
+
+  }
+  void redirectSignUpScreen() {
 
   }
 
@@ -30,7 +35,8 @@ class BottomDisplay extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(bottom: 2.h),
               child: Text(
-                'Already have an account?',
+
+                formAction==FormAction.signin?'Already have an account?':'Don’t have an account? ',
                 style: Theme
                     .of(context)
                     .textTheme
@@ -40,8 +46,10 @@ class BottomDisplay extends StatelessWidget {
             SizedBox(
               width: 8.w,
             ),
-            LinkableText(
-                text: 'Sign In.', onPressed: redirectSignInHandler),
+            if(formAction==FormAction.signin)
+              LinkableText(
+                text: 'Sign In.', onPressed: redirectSignInScreen),
+            if(formAction==FormAction.signup) LinkableText(text: 'Sign Up.', onPressed: redirectSignUpScreen),
           ],
         ),
       ],

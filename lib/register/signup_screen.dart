@@ -1,5 +1,7 @@
-import 'package:cabinet_assistant/register/padding_wrapper.dart';
+import 'package:cabinet_assistant/register/widget/padding_wrapper.dart';
+import 'package:cabinet_assistant/register/widget/tearms_and_privacy.dart';
 import 'package:cabinet_assistant/utils/app_color.dart';
+import 'package:cabinet_assistant/utils/common_enum.dart';
 import 'package:cabinet_assistant/utils/text_theme.dart';
 import 'package:cabinet_assistant/widgets/button_widget.dart';
 import 'package:cabinet_assistant/widgets/linkable_text_widget.dart';
@@ -231,24 +233,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       SizedBox(
                         height: 5.h,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          LinkableText(
-                              text: 'Tearms of use ', onPressed: () {}),
-                          Padding(
-                            padding: EdgeInsets.only(bottom: 3.w),
-                            child: Text(
-                              ' and ',
-                              style: Theme.of(context).textTheme.headline5,
-                            ),
-                          ),
-                          LinkableText(
-                              text: ' Privacy policy', onPressed: () {
-
-                          }),
-                        ],
-                      )
+                      const TearmsAndPrivacy(),
                     ],
                   ),
                   SizedBox(
