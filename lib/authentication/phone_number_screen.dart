@@ -1,12 +1,10 @@
-import 'package:cabinet_assistant/register/widget/app_logo.dart';
-import 'package:cabinet_assistant/register/widget/signup_signin_suggestion.dart';
-import 'package:cabinet_assistant/register/widget/padding_wrapper.dart';
+import 'package:cabinet_assistant/authentication/widget/app_logo.dart';
+import 'package:cabinet_assistant/authentication/widget/signup_signin_suggestion.dart';
+import 'package:cabinet_assistant/authentication/widget/padding_wrapper.dart';
 import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/app_color.dart';
 import 'package:cabinet_assistant/utils/common_enum.dart';
 import 'package:cabinet_assistant/utils/text_theme.dart';
-import 'package:cabinet_assistant/widgets/button_widget.dart';
-import 'package:cabinet_assistant/widgets/linkable_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -55,7 +53,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
   }
 
   void redirectSignInHandler() {
-
+    Navigator.of(context).pushNamed(Routing.signInScreen);
   }
 
   @override

@@ -1,4 +1,5 @@
-import 'package:cabinet_assistant/register/phone_number_screen.dart';
+import 'package:cabinet_assistant/authentication/phone_number_screen.dart';
+import 'package:cabinet_assistant/authentication/signin_screen.dart';
 import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/text_theme.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
 
               appBarTheme: const AppBarTheme(elevation: 0),
             ),
-            home: const PhoneNumberScreen(),
+            home: const SignInScreen(),
             onGenerateRoute: Routing.onGenerateRoute,
           );
       },

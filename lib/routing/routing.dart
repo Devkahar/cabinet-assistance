@@ -1,7 +1,8 @@
-import 'package:cabinet_assistant/register/otp_screen.dart';
-import 'package:cabinet_assistant/register/phone_number_screen.dart';
-import 'package:cabinet_assistant/register/signup_screen.dart';
+import 'package:cabinet_assistant/authentication/phone_number_screen.dart';
+import 'package:cabinet_assistant/authentication/otp_screen.dart';
+import 'package:cabinet_assistant/authentication/signup_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:cabinet_assistant/authentication/signin_screen.dart';
 
 class Routing {
   static const String signUpScreen = 'sign_up_screen';
@@ -26,6 +27,10 @@ class Routing {
       case signUpScreen:
         return MaterialPageRoute(
           builder: (context) => const SignUpScreen(),
+        );
+      case signInScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SignInScreen(),
         );
       default:
         return MaterialPageRoute(

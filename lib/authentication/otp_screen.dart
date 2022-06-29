@@ -1,10 +1,8 @@
-import 'package:cabinet_assistant/register/widget/signup_signin_suggestion.dart';
-import 'package:cabinet_assistant/register/widget/padding_wrapper.dart';
+import 'package:cabinet_assistant/authentication/widget/signup_signin_suggestion.dart';
+import 'package:cabinet_assistant/authentication/widget/padding_wrapper.dart';
 import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/app_color.dart';
 import 'package:cabinet_assistant/utils/common_enum.dart';
-import 'package:cabinet_assistant/widgets/button_widget.dart';
-import 'package:cabinet_assistant/widgets/linkable_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
