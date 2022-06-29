@@ -33,7 +33,7 @@ class _BlinkTextFieldState extends State<BlinkTextField> {
   bool isFieldEmpty = true;
   bool isPasswordVisible = false;
   final mobileNumberFormatter = MaskTextInputFormatter(
-    mask: '###-###-####',
+    mask: '+1 ###-###-####',
     filter: {"#": RegExp(r'[0-9]')},
     type: MaskAutoCompletionType.lazy,
   );

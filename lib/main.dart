@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 
               appBarTheme: const AppBarTheme(elevation: 0),
             ),
-            home: const SignInScreen(),
+            home: const PhoneNumberScreen(),
             onGenerateRoute: Routing.onGenerateRoute,
           );
       },

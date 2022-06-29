@@ -10,9 +10,8 @@ import 'package:pinput/pinput.dart';
 
 class OtpScreen extends StatefulWidget {
   final String phoneNumber;
-
-  const OtpScreen({Key? key, required this.phoneNumber}) : super(key: key);
-
+  final ScreenRedirection screenRedirection;
+  const OtpScreen({Key? key, required this.phoneNumber, required this.screenRedirection}) : super(key: key);
   /// Validate manually
   /// Don't call validate in build method, this is just illustration.
   @override
@@ -42,7 +41,24 @@ class _OtpScreenState extends State<OtpScreen> {
   bool isValidOtp = false;
 
   void onOtpSubmitHandler() {
-    Navigator.of(context).pushNamed(Routing.signUpScreen);
+    print('Submitted');
+    if(widget.screenRedirection==ScreenRedirection.signInScreen) {
+      Navigator.of(context).pushNamed(Routing.signUpScreen);
+      return;
+    }
+    if(widget.screenRedirection==ScreenRedirection.confirmPasswordScreen){
+      Navigator.of(context).pushNamed(Routing.newPasswordScreen);
+    }
+  }
+
+  String get buttonName{
+    if(widget.screenRedirection==ScreenRedirection.signInScreen) {
+      return 'Next';
+    }
+    if(widget.screenRedirection==ScreenRedirection.confirmPasswordScreen){
+      return 'Reset Password';
+    }
+    return 'Next';
   }
 
   void redirectSignInHandler() {}
@@ -105,7 +121,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   )
                 ],
               ),
-             SignupSigninSuggestion(buttonText: 'Next',submitHandler: isValidOtp ? onOtpSubmitHandler : null,formAction: FormAction.signin,),
+             SignupSigninSuggestion(buttonText: buttonName,submitHandler: isValidOtp ? onOtpSubmitHandler : null,formAction: FormAction.signin,),
             ],
           ),
         ),

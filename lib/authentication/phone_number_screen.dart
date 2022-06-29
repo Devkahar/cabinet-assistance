@@ -3,6 +3,7 @@ import 'package:cabinet_assistant/authentication/widget/signup_signin_suggestion
 import 'package:cabinet_assistant/authentication/widget/padding_wrapper.dart';
 import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/app_color.dart';
+import 'package:cabinet_assistant/utils/app_constants.dart';
 import 'package:cabinet_assistant/utils/common_enum.dart';
 import 'package:cabinet_assistant/utils/text_theme.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,10 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
 
   void mobileNumberSubmitHandler() {
     // print("Hey We Recived You're Mobile Number $mobileNumber");
-    Navigator.of(context).pushNamed(Routing.otpScreen,arguments: mobileNumber);
+    Navigator.of(context).pushNamed(Routing.otpScreen,arguments: {
+      AppConstants.phoneNumber: mobileNumber,
+      AppConstants.redirectScreen: ScreenRedirection.signInScreen,
+    });
   }
 
   void redirectSignInHandler() {

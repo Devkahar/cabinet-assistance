@@ -13,6 +13,7 @@ class ButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        if(onPressed==null) return;
         onPressed!();
       },
       child: Container(

@@ -47,7 +47,9 @@ class _SignupSigninSuggestionState extends State<SignupSigninSuggestion> {
             margin: EdgeInsets.only(bottom: 16.5.h),
             child: LinkableText(
               text: 'Forgot Password',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(Routing.forgotPasswordScreen);
+              },
             ),
           ),
         Row(
