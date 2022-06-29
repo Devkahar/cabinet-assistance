@@ -21,7 +21,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
   void phoneNumberValidator(String phoneNumber) {
     this.phoneNumber = phoneNumber;
-    print(phoneNumber);
     setState(() {
       if (phoneNumber.length == 10) {
         isValid = true;

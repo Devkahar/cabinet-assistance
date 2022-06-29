@@ -1,4 +1,3 @@
-import 'package:cabinet_assistant/utils/common_enum.dart';
 import 'package:cabinet_assistant/widgets/linkable_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

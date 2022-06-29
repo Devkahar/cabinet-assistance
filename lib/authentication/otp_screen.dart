@@ -41,7 +41,6 @@ class _OtpScreenState extends State<OtpScreen> {
   bool isValidOtp = false;
 
   void onOtpSubmitHandler() {
-    print('Submitted');
     if(widget.screenRedirection==ScreenRedirection.signInScreen) {
       Navigator.of(context).pushNamed(Routing.signUpScreen);
       return;

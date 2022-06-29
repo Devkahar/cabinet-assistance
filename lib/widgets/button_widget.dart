@@ -23,12 +23,11 @@ class ButtonWidget extends StatelessWidget {
               ? AppColor.blue
               : AppColor.blue.withOpacity(.5),
         ),
-        height: 40,
+        height: 40.h,
         child: Center(
           child: Text(
             text,
-            style:  TextStyle(color: Colors.white, fontSize: 16.sp),
-
+            style: TextStyle(color: Colors.white, fontSize: 16.sp,fontWeight: FontWeight.w600),
           ),
         ),
       ),

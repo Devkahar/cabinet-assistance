@@ -41,11 +41,11 @@ class Routing {
         );
       case forgotPasswordScreen:
         return MaterialPageRoute(
-          builder: (context) => ForgotPasswordScreen(),
+          builder: (context) => const ForgotPasswordScreen(),
         );
       case newPasswordScreen:
         return MaterialPageRoute(
-          builder: (context) => NewPasswordScreen(),
+          builder: (context) => const NewPasswordScreen(),
         );
       default:
         return MaterialPageRoute(

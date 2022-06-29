@@ -3,7 +3,6 @@ import 'package:cabinet_assistant/authentication/widget/tearms_and_privacy.dart'
 import 'package:cabinet_assistant/authentication/widget/text_field.dart';
 import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/app_color.dart';
-import 'package:cabinet_assistant/utils/text_theme.dart';
 import 'package:cabinet_assistant/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

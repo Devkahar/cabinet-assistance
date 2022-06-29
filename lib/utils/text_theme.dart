@@ -22,6 +22,9 @@ class ThemeText {
     fontSize: 14.sp,
     color: AppColor.lightBlack,
   );
+  static TextStyle get _blackHeadline6 => _blackHeadline5.copyWith(
+    fontSize: 12.sp,
+  );
   static TextStyle get _blueButton => _proximaNova.copyWith(
     fontWeight: FontWeight.w400,
     fontSize: 16.sp,
@@ -31,6 +34,7 @@ class ThemeText {
   static getTextTheme() => TextTheme(
     button: _blueButton,
     headline5: _blackHeadline5,
+    headline6: _blackHeadline6,
     subtitle1: _blackSubTitle1,
     subtitle2: _blackSubTitle2,
   );

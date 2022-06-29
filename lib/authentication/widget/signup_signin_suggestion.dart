@@ -31,7 +31,7 @@ class _SignupSigninSuggestionState extends State<SignupSigninSuggestion> {
   void redirectSignUpScreen() {
     Navigator.of(context).pushNamed(Routing.signUpScreen);
   }
-
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
