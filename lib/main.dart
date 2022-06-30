@@ -1,11 +1,12 @@
-import 'package:cabinet_assistant/authentication/phone_number_screen.dart';
+import 'package:cabinet_assistant/authentication/screen/phone_number_screen.dart';
 import 'package:cabinet_assistant/routing/routing.dart';
 import 'package:cabinet_assistant/utils/text_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

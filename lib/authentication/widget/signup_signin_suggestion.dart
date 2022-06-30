@@ -29,7 +29,7 @@ class _SignupSigninSuggestionState extends State<SignupSigninSuggestion> {
   }
 
   void redirectSignUpScreen() {
-    Navigator.of(context).pushNamed(Routing.signUpScreen);
+    Navigator.of(context).pushNamed(Routing.phoneNumberScreen);
   }
   @override
   Widget build(BuildContext context) {

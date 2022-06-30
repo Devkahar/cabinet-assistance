@@ -92,7 +92,7 @@ class _BlinkTextFieldState extends State<BlinkTextField> {
           ),
         ),
         if(widget.errorMessage!=null)
-          Container(margin: EdgeInsets.only(top: 5.h),child: ErrorText(errorText: widget.errorMessage)),
+           ErrorText(errorText: widget.errorMessage),
       ],
     );
   }
@@ -112,9 +112,12 @@ class ErrorText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      errorText??'',
-      style: Theme.of(context).textTheme.errorText,
+    return Container(
+      margin: EdgeInsets.only(top: 16.h),
+      child: Text(
+        errorText??'',
+        style: Theme.of(context).textTheme.errorText,
+      ),
     );
   }
 }

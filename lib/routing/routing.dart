@@ -1,11 +1,11 @@
-import 'package:cabinet_assistant/authentication/forgot_password_screen.dart';
-import 'package:cabinet_assistant/authentication/new_password_screen.dart';
-import 'package:cabinet_assistant/authentication/phone_number_screen.dart';
-import 'package:cabinet_assistant/authentication/otp_screen.dart';
-import 'package:cabinet_assistant/authentication/signup_screen.dart';
+import 'package:cabinet_assistant/authentication/screen/forgot_password_screen.dart';
+import 'package:cabinet_assistant/authentication/screen/new_password_screen.dart';
+import 'package:cabinet_assistant/authentication/screen/phone_number_screen.dart';
+import 'package:cabinet_assistant/authentication/screen/otp_screen.dart';
+import 'package:cabinet_assistant/authentication/screen/signup_screen.dart';
 import 'package:cabinet_assistant/utils/app_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:cabinet_assistant/authentication/signin_screen.dart';
+import 'package:cabinet_assistant/authentication/screen/signin_screen.dart';
 
 class Routing {
   static const String signUpScreen = 'sign_up_screen';
